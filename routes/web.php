@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::post('users/new', 'UsersController@store');
+Route::get('/login','UsersController@index');
+Route::put('users/{id}/update', 'UsersController@update');
+Route::get('users/{id}/delete', 'UsersController@delete');
+
+
